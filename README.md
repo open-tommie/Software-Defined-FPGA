@@ -58,8 +58,8 @@ PlantUMLを使ってsd-fpgaの出力をシーケンス図へ変換します。
 貢献方法は以下の通りです。
 
 1. スポンサーになる。
-1. 「★いいね」する
-1. フォークする。
+1. ★Star する
+1. Fork する。
 1. 新しいブランチを作成する。(git checkout -b feature/YourFeature)
 1. コードをコミットする。(git commit -m 'Add some feature')
 1. プッシュする。(git push origin feature/YourFeature)
