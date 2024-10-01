@@ -12,32 +12,36 @@ Raspberry Pi Pico 2などのマイコンボード上で動作するロジック�
 ## インストール方法
 
 以下の手順でプロジェクトをローカル環境にインストールしてください。
+Ubuntu20でのみテストしていますが、ほとんどのLinuxで動くと思います。
 
 ```bash
-リポジトリをクローン
-git clone https://github.com/username/repository.git
+# リポジトリをクローン
+$ git clone https://github.com/open-tommie/Software-Defined-FPGA.git
 
-ディレクトリに移動
-cd repository
+# ディレクトリに移動
+$ cd Software-Defined-FPGA
 
-依存関係をインストール
-pip install -r requirements.txt
+# ビルドディレクトリを作成して移動
+$ mkdir build
+$ cd build
+
+# ビルド
+$ cmake ..
+$ cmake --build .
+
 ```
 
 ## 使い方
 
-実行方法の例
+```
+# 実行方法の例
+$ ./sd-fpga
+```
+
+## ログ解説
 
 ```
-python main.py --option value
-```
-
-## サンプル
-
-サンプルコード
-
-```
-print("Hello, World!")
+log
 ```
 
 ## ライセンス
