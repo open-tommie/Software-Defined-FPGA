@@ -44,11 +44,11 @@ pip install -r requirements.txt
 
 貢献方法は以下の通りです。
 
-1.フォークする。
-1.新しいブランチを作成する。(git checkout -b feature/YourFeature)
-1.コードをコミットする。(git commit -m 'Add some feature')
-1.プッシュする。(git push origin feature/YourFeature)
-1.プルリクエストを作成する。
+1. フォークする。
+1. 新しいブランチを作成する。(git checkout -b feature/YourFeature)
+1. コードをコミットする。(git commit -m 'Add some feature')
+1. プッシュする。(git push origin feature/YourFeature)
+1. プルリクエストを作成する。
 
 ## クレジット
 (使用したライブラリや貢献者の名前を記す。)
