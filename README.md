@@ -26,14 +26,16 @@ pip install -r requirements.txt
 
 実行方法の例
 
-```python main.py --option value
+```
+python main.py --option value
 ```
 
 ## サンプル
 
 サンプルコード
 
-```print("Hello, World!")
+```
+print("Hello, World!")
 ```
 
 ## ライセンス
@@ -51,4 +53,4 @@ pip install -r requirements.txt
 1. プルリクエストを作成する。
 
 ## クレジット
-(使用したライブラリや貢献者の名前を記す。)
+(使用したライブラリや貢献者の名前を記す予定です)
