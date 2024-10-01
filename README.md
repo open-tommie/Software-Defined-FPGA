@@ -19,19 +19,22 @@ git clone https://github.com/username/repository.git
 cd repository
 
 依存関係をインストール
-pip install -r requirements.txt```
+pip install -r requirements.txt
+```
 
 ## 使い方
 
 実行方法の例
 
-```python main.py --option value```
+```python main.py --option value
+```
 
 ## サンプル
 
 サンプルコード
 
-```print("Hello, World!")```
+```print("Hello, World!")
+```
 
 ## ライセンス
 
