@@ -46,7 +46,7 @@ $ ./sd-fpga
 
 ・ANDロジックを２つ使った簡単な回路でテストしています。
 
-(TBD)
+<img src="circuit-1.png" alt="回路図1" >
 
 ## ログ解説
 (TBD)
