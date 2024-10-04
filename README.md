@@ -7,12 +7,13 @@ Raspberry Pi Pico 2などのマイコンボード上で動作するロジック�
 - 実際のピン電圧がLow, Highに変化することがPC上のシミュレーションと異なる点です。
 - 本物のFPGAではVerilogやVHDLなどの言語を使用しますが、Software-Defined-FPGAでは回路図情報を入力とします。（予定）
   - 現在は結線情報をソースコードに埋め込みます。
-- 現在はUbuntu20上でPoC（概念実証）できた段階です。
+- 現在はUbuntu24上でPoC（概念実証）できた段階です。
 
 ## インストール方法
 
 以下の手順でプロジェクトをローカル環境にインストールしてください。
-Ubuntu20でのみテストしていますが、ほとんどのLinuxで動くと思います。
+
+Ubuntu24でのみテストしていますが、ほとんどのLinuxで動くと思います。
 
 ```bash
 # リポジトリをクローン
@@ -45,11 +46,11 @@ $ ./sd-fpga
 log
 ```
 
-## シーケンス図へ変換する手順
+## ログをシーケンス図へ変換する手順
 
-PlantUMLを使ってsd-fpgaの出力をシーケンス図へ変換します。
+PlantUMLを使ってsd-fpgaの出力ログをシーケンス図へ変換します。
 
-### sd-fpgaの出力をPlantUMLのシーケンス図形式に変換する
+### ログをPlantUMLのシーケンス図形式に変換する
 
 ```bash
 $ ./sd-fpga |grep UML|sed -E 's/^.*UML://'
@@ -126,7 +127,7 @@ ic02.pin02 is low
 
 [PlantUML Web Server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
 
-・以下を先頭にコピーします。
+・下記のピン定義を先頭にコピーします。
 ```text
 @startuml
 binary "AND0.pin0" as ic00.pin00
@@ -140,11 +141,16 @@ binary "N/A" as ic02.pin01
 binary "N/A" as ic02.pin02
 ```
 
-・sd-fpgaの出力をコピーします。
+・ピン定義の後にsd-fpgaの出力をコピーします。
+
+・末尾に以下をコピーします。
+```text
+@enduml
+```
+
 ・シーケンス図は自動更新されます。
-[PlantUMLシーケンス図の例1](PlantUML-sd-fpga.png)
 
-
+<img src="PlantUML-sd-fpga.png" alt="PlantUMLシーケンス図1" >
 
 ## ライセンス
 
