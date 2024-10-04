@@ -142,9 +142,7 @@ binary "N/A" as ic02.pin02
 
 ・sd-fpgaの出力をコピーします。
 ・シーケンス図は自動更新されます。
-
-#### PlantUMLシーケンス図の例
-
+[PlantUMLシーケンス図の例1](PlantUML-sd-fpga.png)
 
 
 
