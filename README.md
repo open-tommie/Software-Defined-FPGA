@@ -9,11 +9,40 @@ Raspberry Pi Pico 2などのマイコンボード上で動作するロジック�
   - 現在は結線情報をソースコードに埋め込みます。
 - 現在はUbuntu24上でPoC（概念実証）できた段階です。
 
-## インストール方法
+## ツールチェインのインストール
+
+### 共通ツールチェインをインストールする
+
+・ターゲットに関係なく必要なツールをインストールします。
+
+```bash
+sudo apt update
+sudo apt upgrade
+sudo apt install git cmake
+```
+
+### ターゲットUbuntu24向けツールチェインをインストールする
+
+・Gnu Cなど、ビルドに必要なツールをインストールします。
+
+```bash
+sudo apt install build-essential
+```
+
+### ターゲットRaspberry Pi Pico 2向けツールチェインをインストールする
+
+・ARM用クロスコンパイルに必要なツールをインストールします。
+
+```bash
+sudo apt install gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
+```
+
+
+## ターゲットUbuntu24向けビルド手順
 
 以下の手順でプロジェクトをローカル環境にインストールしてください。
 
-Ubuntu24でのみテストしていますが、ほとんどのLinuxで動くと思います。
+現在はUbuntu24でのみテストしていますが、ほとんどのLinuxで動くと思います。
 
 ```bash
 # リポジトリをクローン
