@@ -37,7 +37,7 @@ $ cmake --build .
 # 実行方法の例
 $ ./sd-fpga
 ```
-（TBD)
+・実行するとログを出力します。
 
 ## ログ解説
 (TBD)
@@ -48,7 +48,105 @@ log
 ## シーケンス図へ変換する手順
 
 PlantUMLを使ってsd-fpgaの出力をシーケンス図へ変換します。
-(TBD)
+
+### sd-fpgaの出力をPlantUMLのシーケンス図形式に変換する
+
+```bash
+$ ./sd-fpga |grep UML|sed -E 's/^.*UML://'
+```
+#### 変換後の出力例
+
+```text
+@0
+ic00.pin00 is low
+ic00.pin01 is low
+ic00.pin02 is low
+ic01.pin00 is low
+ic01.pin01 is low
+ic01.pin02 is low
+ic02.pin00 is low
+ic02.pin01 is low
+ic02.pin02 is low
+@1
+ic00.pin00 is high
+ic00.pin01 is high
+ic00.pin02 is low
+ic01.pin00 is low
+ic01.pin01 is high
+ic01.pin02 is low
+ic02.pin00 is low
+ic02.pin01 is low
+ic02.pin02 is low
+@2
+ic00.pin00 is high
+ic00.pin01 is high
+ic00.pin02 is high
+ic01.pin00 is high
+ic01.pin01 is high
+ic01.pin02 is low
+ic02.pin00 is low
+ic02.pin01 is low
+ic02.pin02 is low
+@3
+ic00.pin00 is high
+ic00.pin01 is high
+ic00.pin02 is high
+ic01.pin00 is high
+ic01.pin01 is high
+ic01.pin02 is high
+ic02.pin00 is high
+ic02.pin01 is low
+ic02.pin02 is low
+@4
+ic00.pin00 is high
+ic00.pin01 is high
+ic00.pin02 is high
+ic01.pin00 is high
+ic01.pin01 is high
+ic01.pin02 is high
+ic02.pin00 is high
+ic02.pin01 is low
+ic02.pin02 is low
+@5
+ic00.pin00 is high
+ic00.pin01 is high
+ic00.pin02 is high
+ic01.pin00 is high
+ic01.pin01 is high
+ic01.pin02 is high
+ic02.pin00 is high
+ic02.pin01 is low
+ic02.pin02 is low
+```
+
+
+### PlantUMLのWebサイトでシーケンス図を描画
+
+・PlantUMLのサイトをWebブラウザで開きます。
+
+[PlantUML Web Server](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+
+・以下を先頭にコピーします。
+```text
+@startuml
+binary "AND0.pin0" as ic00.pin00
+binary "AND0.pin1" as ic00.pin01
+binary "AND0.pin2" as ic00.pin02
+binary "AND1.pin0" as ic01.pin00
+binary "AND1.pin1" as ic01.pin01
+binary "AND1.pin2" as ic01.pin02
+binary "LED1.pin0" as ic02.pin00
+binary "N/A" as ic02.pin01
+binary "N/A" as ic02.pin02
+```
+
+・sd-fpgaの出力をコピーします。
+・シーケンス図は自動更新されます。
+
+#### PlantUMLシーケンス図の例
+
+
+
 
 ## ライセンス
 
