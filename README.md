@@ -1,6 +1,10 @@
 # Software-Defined-FPGA
 Raspberry Pi Pico 2などのマイコンボード上で動作するロジックシミュレータです。
 
+<img src="circuit-1.png" alt="回路図1" >
+
+<img src="PlantUML-sd-fpga.png" alt="PlantUMLシーケンス図1" >
+
 ## 概要
 
 - マイコンボード上で実行することにより、ロジックシミュレーション結果をピン電圧として出力します。
